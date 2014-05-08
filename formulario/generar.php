@@ -17,7 +17,7 @@ highlight_file('generar.php');
 include '../librerias/class_mysql.php';
 include '../librerias/config.php';
 
-if (isset(filter_i$_GET['database'])) {
+if (isset($_GET['database'])) {
     $tabla = $_GET['table'];
     $database = $_GET['database'];
     $form = new MySql();
