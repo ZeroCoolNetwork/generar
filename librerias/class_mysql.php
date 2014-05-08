@@ -63,6 +63,7 @@ class MySql {
     }
 
     public function formularioEdit($tabla, $id, $database) {
+        $tipo = "";
         header("Content-Type: text/html; charset=iso-8859-1");
         $con = mysql_connect(DB_SERVER, DB_USER, DB_PASS);
         mysql_select_db($database);
@@ -96,6 +97,8 @@ class MySql {
     }
 
     public function formularioIdAutoincrement($tabla, $database) {
+        $tipo = "";
+        $tipos = "";
         $con = mysql_connect(DB_SERVER, DB_USER, DB_PASS);
         mysql_select_db($database);
         $result = mysql_query("select * from $tabla", $con);
@@ -106,7 +109,7 @@ class MySql {
 
         for ($i = 0; $i < $total_campos; $i++) {
             $tipo .= mysql_field_flags($result, $i);
-            $tipos = explode(' ', $tipo);
+            $tipos = explode(" ", $tipo);
             if ($tipos[2] == "auto_increment") {
                 
             } else {
