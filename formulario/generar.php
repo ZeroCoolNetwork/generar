@@ -13,7 +13,7 @@ jQuery(function (){
 </script>
 <?php
 
-highlight_file('generar.php');
+error_reporting(E_ALL ^ E_NOTICE);
 include '../librerias/class_mysql.php';
 include '../librerias/config.php';
 

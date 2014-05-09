@@ -160,6 +160,7 @@ class MySql {
         $total_campos = mysql_num_fields($result);
         $campos = array();
         $val = array();
+        
 
         $ids = mysql_field_name($result, 0);
 
@@ -168,6 +169,7 @@ class MySql {
             $val[$i] = $_POST[mysql_field_name($result, $i)];
         }
 
+            
         $valores = array_values($val);
         $camp = array_values($campos);
 
