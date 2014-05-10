@@ -2,7 +2,7 @@
 jQuery(function (){
    jQuery("#guardar").submit(function (event){
        jQuery.post(jQuery("#guardar").attr("action"),jQuery("#guardar").serializeArray(),function (info){
-        alert(info);
+        bootbox.alert(info);
       jQuery("#guardar :input[type='text']").each(function (){
          jQuery(this).val(''); 
       });

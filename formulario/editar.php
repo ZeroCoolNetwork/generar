@@ -2,7 +2,7 @@
 jQuery(function (){
    jQuery("#editar").submit(function (event){
        jQuery.post(jQuery("#editar").attr("action"),jQuery("#editar").serializeArray(),function (info){
-        alert(info);
+        bootbox.alert(info);
       jQuery("#editar :input").each(function (){
          jQuery(this).val(''); 
       });

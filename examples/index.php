@@ -57,7 +57,7 @@ include '../librerias/class_mysql.php';
         <script src="../assets/js/bootstrap-carousel.js"></script>
         <script src="../assets/js/bootstrap-typeahead.js"></script>
         <script src="../librerias/genrapryect.js"></script>
-
+        <script src="../assets/js/bootbox.js"></script>
     </head>
 
     <body>
